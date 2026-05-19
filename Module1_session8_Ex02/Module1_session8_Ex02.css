@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Box chung */
+.item{
+    background-color: rgb(0, 140, 255);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+    flex: 1 1 calc(25% - 20px); /* Desktop: 4 cột */
+}
+
+/* Tablet: 2 cột */
+@media (max-width: 992px){
+    .box{
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Mobile: 1 cột */
+@media (max-width: 576px){
+    .box{
+        flex: 1 1 100%;
+    }
+}
