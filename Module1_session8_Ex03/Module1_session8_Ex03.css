@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Cho phép xuống dòng */
+  justify-content: space-between;
+}
+
+.footer-item {
+  width: 45%; /* 2 cột trên màn hình lớn */
+  margin-bottom: 10px;
+}
+
+/* Khi màn hình nhỏ (mobile) */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column; /* Dồn thành 1 cột */
+  }
+
+  .footer-item {
+    width: 100%;
+  }
+}
