@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container{
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+
+    /* Mặc định: màn hình lớn (desktop) → 4 cột */
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.item{
+    background-color: rgb(0, 140, 255);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+}
+
+/* Tablet: 2 cột */
+@media (max-width: 992px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 cột */
+@media (max-width: 576px){
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+}
